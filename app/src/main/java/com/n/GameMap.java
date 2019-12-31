@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 
 public class GameMap extends View {
     int posX,posY =400;
+    Cat cat;
     public GameMap(Context context, @Nullable AttributeSet attrs) {
 
         super(context, attrs);
@@ -21,6 +22,9 @@ public class GameMap extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        if (cat == null) {
+            cat = new cat(this);
+        }
         Log.d("Game","onDraw"+getWidth()+","+getHeight());
         Paint paint = new Paint();
         Paint paint0 = new Paint();
@@ -33,11 +37,13 @@ public class GameMap extends View {
         }
     }
 
-    public float getPosX(){return posX;}
-
-    public void setPosX(float posX) {posX:-50.0
-        if (posX > 0 && posX < getWidth()-100){
-            this.posX = posX;
+    public void moveDown(){
+        if (cat.getY() < getHeight()-150){
+            cat.setDaemon(Cat.DIRECTION_DOWN);
+            invalidate();
         }
     }
+    public void moveUp({
+        if (cat.)
+    })
 }

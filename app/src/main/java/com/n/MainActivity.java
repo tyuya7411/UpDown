@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.left:
                 Log.d("MainActivity","onClick:LEFT");
-                Log.d()
                 if(gameMap.posX>10)
                     gameMap.posX=gameMap.posX-50;
                 gameMap.invalidate();
